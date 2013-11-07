@@ -29,15 +29,16 @@ public class TestOrdering {
         carList.add(new Car("Indigo V2", "Red"));
         carList.add(new Car("Suzuki Jazz", "Magenta"));
 
-        System.out.println("1\n");
+        System.out.println("1 - without sorting - \n");
         for (Car carSort : carList) {
             System.out.println("carsort is " + carSort.getName() + " - " + carSort.getColor());
         }
-        List sortOrder = Arrays.asList("Red" ,"Viol","Magenta", "Silver","Blue");
+        
+        final List sortOrder = Arrays.asList("Red" ,"Viol","Magenta", "Silver","Blue");
         
         Collections.sort(carList, new ColorComparator(sortOrder));
 
-        System.out.println("2\n");
+        System.out.println("2 - sorting cars accordning to sortOrder-list - \n");
         for (Car carSort : carList) {
             System.out.println("carsort is " + carSort.getName() + " - " + carSort.getColor());
         }
